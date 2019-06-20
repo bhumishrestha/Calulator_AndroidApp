@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView t1;
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9,add,sub;
     float val1,val2;
-    Boolean addition,subtraction;
+    Boolean addition,subtraction,mulplication,division;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
             e2.setText("-");
         }
     }
-    public void eq(View view){
+    public void eq(View view)
+    {
         val2=Float.parseFloat(e1.getText()+"");
         if (addition == true){
             float total=val1+val2;
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             e2.setText("=");
             addition=false;
         }
-        else {
+        else if {
             float total=val1-val2;
             t1.setText(total+"");
             String tv=Float.toString((total));
@@ -102,6 +103,23 @@ public class MainActivity extends AppCompatActivity {
             e2.setText("=");
             subtraction=false;
         }
+       else if {
+            float total=val1*val2;
+            t1.setText(total+"");
+            String tv=Float.toString((total));
+            e1.setText(tv);
+            e2.setText("=");
+            multiplication=false;
+        }
+        else if {
+            float total=val1*val2;
+            t1.setText(total+"");
+            String tv=Float.toString((total));
+            e1.setText(tv);
+            e2.setText("=");
+            division=false;
+        }
+
 
     }
 }
