@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText e1,e2;
     TextView t1;
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,add,sub;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,add,sub,mul,div;
     float val1,val2;
     Boolean addition,subtraction,mulplication,division;
     @Override
@@ -83,7 +83,27 @@ public class MainActivity extends AppCompatActivity {
             e1.setText("");
             e2.setText("-");
         }
+          public void mul(View view){
+        if(e1==null){
+            e1.setText("");
+        }else{
+            val1=Float.parseFloat(e1.getText()+"");
+            multiplication =true;
+            e1.setText("");
+            e2.setText("*");
+        }
+              public void div(View view){
+        if(e1==null){
+            e1.setText("");
+        }else{
+            val1=Float.parseFloat(e1.getText()+"");
+            division =true;
+            e1.setText("");
+            e2.setText("*");
+        }
     }
+ 
+    
     public void eq(View view)
     {
         val2=Float.parseFloat(e1.getText()+"");
